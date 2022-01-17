@@ -10,42 +10,6 @@ var myPlaylist = [
     {
         name: 'Romantic Mashup',
         url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
-    }, {
-        name: 'Romantic Mashup',
-        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
     },
 ];
 
