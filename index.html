@@ -2,64 +2,88 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music Player</title>
-    <link rel="stylesheet" href="./main.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Music Player</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+	<link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
-    <div class="music-player">
-        <div class="playlist">
-            <div class="songs">
-                <div>TEst</div>
-                <div>Test</div>
-            </div>
-            <input type="file"  name="musicFile" value="+">
-            <input type="button" value=" + ">
-        </div>
-        <div class="song">
-            <div class="imagex">
+	<div class="music-player" id="music-player">
+		
+		<div class="playlist">
+			<h3>Playlist</h3>
+			<div class="songs" id="songs"></div>
+			<input type="file" name="musicFile" value="+">
+			<input type="button" value=" + " data-toggle="modal" data-target="#modal" class="btn btn-sm btn-outline-primary">
+			<!-- <a href="" data-toggle="modal" data-target="#modal" class="btn btn-sm btn-outline-primary"> + </a> -->
+		</div>
+		
+		<div class="music-info">
+			<div class="music-meta-data">
+				<h3 class="music-name" id="music-name"></h3>
+				<div class="progress-bar" id="progress-bar">
+					<div class="progress" id="progress"></div>
+				</div>
+				<audio id="currently-playing" src=""></audio>
+			</div>
+			<div class="controls">
+				<div class="controllers">
+					<button id="prev">
+						<i class="fas fa-backward"></i>
+					</button>
+					<button id="play">
+						<i class="fas fa-play"></i>
+					</button>
+					<button id="next">
+						<i class="fas fa-forward"></i>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<p class="currTime" id="currTime"></p>
+	<p class="durTime" id="durTime"></p>
 
-            </div>
-            <div class="controls">
-                <div class="controllers">
-                    <button id="prev">
-                        <?xml version="1.0" ?><svg height="48px" version="1.1" viewBox="0 0 48 48" width="48px"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <title />
-                            <desc />
-                            <g fill="none" fill-rule="evenodd" id="Page-1" stroke="none" stroke-width="1">
-                                <g id="Artboard-Copy" transform="translate(-347.000000, -669.000000)">
-                                    <path
-                                        d="M370.329694,681.508745 C370.513482,681.342734 370.752335,681.250829 371,681.250829 C371.552285,681.250829 372,681.698545 372,682.250829 L372,690.24 L381.318631,681.565202 C381.503697,681.392922 381.747156,681.297142 382,681.297142 C382.552285,681.297142 383,681.744857 383,682.297142 L383,701.702858 C383,701.955703 382.90422,702.199161 382.73194,702.384228 C382.35563,702.788467 381.72287,702.811108 381.318631,702.434798 L372,693.76 L372,701.749171 C372,701.996835 371.908096,702.235689 371.742085,702.419477 C371.371885,702.829319 370.739536,702.861455 370.329694,702.491255 L359.53655,692.742085 C359.511424,692.719389 359.487467,692.695432 359.464771,692.670306 C359.094571,692.260464 359.126708,691.628115 359.53655,691.257915 L370.329694,681.508745 Z"
-                                        fill="#000000" id="prev2" />
-                                    <g id="slices" transform="translate(47.000000, 9.000000)" />
-                                </g>
-                            </g>
-                        </svg>
-                    </button>
-                    <button id="play">
-                        <img
-                            src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAxElEQVRIie3WMWpCURBG4Q8FSRrtbC2SPhvICmzchVuwtXQLbsE2pVUIkjqQHVgqNmIj6EvxGHhFQAIvcxt/OPVhhrlzh3sKZ4MvTLLFVYNPvJYQB294LiGucMYSw2xxcMQcj9niYIsputni4BvjEuJgjZcS4goXrDDKFgcnLDDIFgd7zNDLFgfvTUHnL23ISJuV7iS3Ooarn1VxkeeUvkDSV2b6J3FQT+pDW8Jb4vRD4Kqe1Kf/Ev4mTj32PhQ6b+9pPT+XHgysHrPM6QAAAABJRU5ErkJggg==" />
-                    </button>
-                    <button id="next">
-                        <?xml version="1.0" ?>
-                        <!DOCTYPE svg
-                            PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg
-                            id="Lager_1" style="enable-background:new -265 388.9 64 64;" version="1.1"
-                            viewBox="-265 388.9 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
-                            xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <path
-                                d="M-210,422.1l-26.1-15.1c-0.6-0.4-1.4,0.1-1.4,0.8v8l-15.2-8.8c-0.6-0.4-1.4,0.1-1.4,0.8V438c0,0.7,0.8,1.1,1.4,0.8l15.2-8.8  v8c0,0.7,0.8,1.1,1.4,0.8l26.1-15.1C-209.4,423.3-209.4,422.5-210,422.1z" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="./main.js"></script>
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="ModalLabel">Add a Song to playlist</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="py-3">
+						<div>
+							<form>
+								<div class="form-group">
+								  <label for="musicNameid">Song Name</label>
+								  <input type="text" class="form-control" name="musicNameid" id="musicNameid" placeholder="Enter Song Name">
+								</div>
+								<div class="form-group">
+								  <label for="musicURLid">URL</label>
+								  <input type="url" class="form-control" name="musicURLid" id="musicURLid" placeholder="Enter Song URL" aria-describedby="urlHelp">
+								  <small id="urlHelp" class="form-text text-muted">Enter proper URL to play the song!</small>
+								</div>
+								<button type="submit" class="btn btn-primary">Submit</button>
+							  </form>  
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="./main.js"></script>
 </body>
-
 </html>
