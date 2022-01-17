@@ -1,29 +1,8 @@
-// document.querySelector("input[type='button']").addEventListener('click', () => {
-//     console.log("TEst");
-//     document.querySelector("input[type='file']").click();
-// });
-// var songs = [];
-// document.querySelector("input[type='file']").addEventListener('change', () => {
-//     let data = document.querySelector("input[type='file']").value.split('\\');
-//     let div = document.createElement("div");
-//     let text = document.createTextNode(data[data.length - 1]);
-//     let audio = document.createElement("audio");
-//     console.log(text);
-//     audio.src = text;
-//     songs.push(audio);
-//     div.appendChild(text);
-//     div.appendChild(audio);
-//     audio.play();
-
-//     document.querySelector('.songs').appendChild(div);
-// });
-//planned to add available songs
 var dummyURLS = [
     'https://pwdown.com/9043/16%20Mast%20Magan%20-%202%20States%20(Arijit%20Singh).mp3',
     'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
     'https://pwdown.com/113558/Ranjha%20-%20Shershaah.mp3',
     'https://pwdown.com/12075/Kabira%20-%20Arijit%20Singh%20-%20320Kbps.mp3',
-
 ]
 
 var songIndex = 0;
@@ -31,14 +10,50 @@ var myPlaylist = [
     {
         name: 'Romantic Mashup',
         url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
+    }, {
+        name: 'Romantic Mashup',
+        url: 'https://pwdown.com/113506/Romantic%20Mashup%202021%20Ringtone.mp3',
     },
 ];
 
-function displayPlaylist(){
+function displayPlaylist() {
     $('#songs').empty();
     $.each(myPlaylist, function (index) {
-        sno = index+1;
-        $('#songs').append('<div>'+ sno + '. ' + myPlaylist[index].name +'</div>');
+        sno = index + 1;
+        $('#songs').append('<div>' + sno + '. ' + myPlaylist[index].name + '</div>');
     });
 }
 
@@ -48,7 +63,7 @@ document.addEventListener('submit', function (event) {
     event.preventDefault();
     var formData = new FormData(event.target);
     var ind = myPlaylist.length;
-    const obj = {name: formData.get("musicNameid"), url: formData.get("musicURLid")};
+    const obj = { name: formData.get("musicNameid"), url: formData.get("musicURLid") };
     myPlaylist.push(obj);
     displayPlaylist();
     $('#modal').modal('hide');
@@ -88,7 +103,7 @@ function pauseSong() {
 
 function prevSong() {
     songIndex--;
-    songIndex = (songIndex < 0) ? (Object.keys(myPlaylist).length - 1): songIndex;
+    songIndex = (songIndex < 0) ? (Object.keys(myPlaylist).length - 1) : songIndex;
     let name = myPlaylist[songIndex].name;
     let url = myPlaylist[songIndex].url;
     loadSong(name, url);
@@ -97,7 +112,7 @@ function prevSong() {
 
 function nextSong() {
     songIndex++;
-    songIndex = (songIndex > (Object.keys(myPlaylist).length - 1))? 0: songIndex;
+    songIndex = (songIndex > (Object.keys(myPlaylist).length - 1)) ? 0 : songIndex;
     let name = myPlaylist[songIndex].name;
     let url = myPlaylist[songIndex].url;
     loadSong(name, url);

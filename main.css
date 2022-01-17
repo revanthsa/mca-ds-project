@@ -44,7 +44,7 @@ body .music-player .playlist {
 
 body .music-player .playlist h3{
   padding: 2px;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: bold;
   display: flex;
   justify-content: center;
@@ -53,9 +53,12 @@ body .music-player .playlist h3{
 body .music-player .playlist .songs {
   padding: 5%;
   width: 93.125%;
+  height: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow-x: hidden;
+  overflow-y: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -74,15 +77,14 @@ body .music-player .playlist .songs div {
   color: #F5F3F0;
 }
 
-body .music-player .playlist input[type="file"] {
-  display: none;
-}
-
 body .music-player .playlist input[type="button"] {
-  font-size: 3rem;
+  margin-top: 1rem;
+  font-size: 25px;
+  font-weight: bold;
   background-color: #F5F3F0;
   border: 0px;
-  border-radius: 5rem;
+  padding: 0.5rem;
+  border-radius: 3rem;
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);

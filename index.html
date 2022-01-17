@@ -6,24 +6,24 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Music Player</title>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
-	<link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="./main.css">
 </head>
 
 <body>
 	<div class="music-player" id="music-player">
-		
+
 		<div class="playlist">
 			<h3>Playlist</h3>
 			<div class="songs" id="songs"></div>
-			<input type="file" name="musicFile" value="+">
-			<input type="button" value=" + " data-toggle="modal" data-target="#modal" class="btn btn-sm btn-outline-primary">
-			<!-- <a href="" data-toggle="modal" data-target="#modal" class="btn btn-sm btn-outline-primary"> + </a> -->
+			<input type="button" value="Add Songs" data-toggle="modal" data-target="#modal"
+				class="btn btn-sm btn-outline-primary">
 		</div>
-		
+
 		<div class="music-info">
 			<div class="music-meta-data">
+				<h3>Player</h3>
 				<h3 class="music-name" id="music-name"></h3>
 				<div class="progress-bar" id="progress-bar">
 					<div class="progress" id="progress"></div>
@@ -62,16 +62,19 @@
 						<div>
 							<form>
 								<div class="form-group">
-								  <label for="musicNameid">Song Name</label>
-								  <input type="text" class="form-control" name="musicNameid" id="musicNameid" placeholder="Enter Song Name">
+									<label for="musicNameid">Song Name</label>
+									<input type="text" class="form-control" name="musicNameid" id="musicNameid"
+										placeholder="Enter Song Name">
 								</div>
 								<div class="form-group">
-								  <label for="musicURLid">URL</label>
-								  <input type="url" class="form-control" name="musicURLid" id="musicURLid" placeholder="Enter Song URL" aria-describedby="urlHelp">
-								  <small id="urlHelp" class="form-text text-muted">Enter proper URL to play the song!</small>
+									<label for="musicURLid">URL</label>
+									<input type="url" class="form-control" name="musicURLid" id="musicURLid"
+										placeholder="Enter Song URL" aria-describedby="urlHelp">
+									<small id="urlHelp" class="form-text text-muted">Enter proper URL to play the
+										song!</small>
 								</div>
 								<button type="submit" class="btn btn-primary">Submit</button>
-							  </form>  
+							</form>
 						</div>
 					</div>
 				</div>
@@ -86,4 +89,5 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 	<script src="./main.js"></script>
 </body>
+
 </html>
