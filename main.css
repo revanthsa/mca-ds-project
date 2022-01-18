@@ -223,6 +223,15 @@ body .music-player .music-info .music-meta-data .cd_player .player-cd .hole{
   0%{
     transform: rotateZ(0deg);
   }
+  25%{
+    transform: rotateZ(90deg) skewX(3px);
+  }
+  50%{
+    transform: rotateZ(180deg) scale(1.4);
+  }
+  75%{
+    transform: rotateZ(270deg) skewY(3px);
+  }
   100%{
     transform: rotateZ(360deg);
   }
