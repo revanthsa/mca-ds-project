@@ -52,6 +52,7 @@ function loadSong(name, url) {
 }
 
 function playSong() {
+    cd.style.animationPlayState = 'running';
     musicPlayer.classList.add('play');
     playBtn.querySelector('i.fas').classList.remove('fa-play');
     playBtn.querySelector('i.fas').classList.add('fa-pause');
@@ -59,6 +60,8 @@ function playSong() {
 }
 
 function pauseSong() {
+
+    cd.style.animationPlayState = 'paused';
     musicPlayer.classList.remove('play');
     playBtn.querySelector('i.fas').classList.add('fa-play');
     playBtn.querySelector('i.fas').classList.remove('fa-pause');
@@ -153,7 +156,9 @@ function DurTime(e) {
     durTime.innerHTML = min_d + ':' + sec_d;
 
 };
-
+var cd = document.querySelector(".player-cd");
+const isPlaying = musicPlayer.classList.contains('play');
+cd.style.animationPlayState = 'paused';
 playBtn.addEventListener('click', () => {
     const isPlaying = musicPlayer.classList.contains('play');
     if (isPlaying) {
